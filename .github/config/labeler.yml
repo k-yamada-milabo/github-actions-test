@@ -1,0 +1,42 @@
+# 'app/backend/src/settings.rs' に変更があったときに 'backend env' ラベルを追加
+backend env:
+- changed-files:
+  - any-glob-to-any-file: 'src/settings.rs'
+
+# 'migrations' フォルダ内のファイル変更に 'migration' ラベルを追加
+migration:
+- changed-files:
+  - any-glob-to-any-file: 'migrations/**'
+
+# 'tests' フォルダ内のファイル変更に 'backend test' ラベルを追加
+backend test:
+- changed-files:
+  - any-glob-to-any-file: 'tests/**'
+
+# 'e2e' フォルダ内のファイル変更に 'e2e' ラベルを追加
+e2e:
+- changed-files:
+  - any-glob-to-any-file: 'e2e/**'
+
+# 'mobile' フォルダ内のファイル変更に 'mobile app' ラベルを追加
+mobile app:
+- changed-files:
+  - any-glob-to-any-file: 'mobile/**'
+
+# 'infra' フォルダ内のファイル変更に 'infra' ラベルを追加
+infra:
+- changed-files:
+  - any-glob-to-any-file: 'infra/**'
+
+# 'docs' フォルダ内のファイル変更に 'documentation' ラベルを追加
+documentation:
+- changed-files:
+  - any-glob-to-any-file: 'docs/**'
+
+# ヘッドブランチ名が `feature` で始まる、または名前に `feature` セクションがある任意のPRに 'enhancement' ラベルを追加
+enhancement:
+  - head-branch: ['^feature', 'feature']
+
+# `main` ブランチに対してオープンされたPRに 'release' ラベルを追加
+release:
+  - base-branch: 'main'
